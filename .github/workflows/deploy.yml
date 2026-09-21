@@ -35,6 +35,6 @@ jobs:
   checks:
     needs: detect-changes
     if: needs.detect-changes.outputs.changed_context != 'none'
-    uses: .github/workflows/checks.yml
+    uses: ./.github/workflows/checks.yml
     with:
       context: ${{ needs.detect-changes.outputs.changed_context }}
